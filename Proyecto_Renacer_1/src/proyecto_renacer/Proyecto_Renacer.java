@@ -11,8 +11,17 @@ public class Proyecto_Renacer {
         RegistroMedicos registroMedicos = new RegistroMedicos();
         InventarioMedicamentos inventario = new InventarioMedicamentos();
         ExpedienteMedico expediente = new ExpedienteMedico();
-
-        while (true) {
+        new Recepcionista("admin", "1234");
+        new Recepcionista("recep1", "password1");
+        new Recepcionista("recep2", "password2");
+        System.out.println("Ingrese el nombre de usuario: ");
+        String usuarioIngresado = scanner.nextLine();
+        System.out.println("Ingrese la contraseña: ");
+        String contrasenaIngresada = scanner.nextLine();
+        // Validar login
+        if (Recepcionista.validarLogin(usuarioIngresado, contrasenaIngresada)) {
+            System.out.println("¡Login exitoso! Accediendo a las opciones...");
+            while (true) {
             System.out.println("\nBienvenido al Sistema de Gestión Médica");
             System.out.println("1. Registrar paciente");
             System.out.println("2. Consultar información de paciente");
@@ -133,5 +142,10 @@ public class Proyecto_Renacer {
                     System.out.println("Opción inválida. Por favor, elija nuevamente.");
             }
         }
+        } else {
+            System.out.println("Usuario o contraseña incorrectos.");
+        }
+
+        scanner.close();
     }
 }
