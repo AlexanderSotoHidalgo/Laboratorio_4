@@ -73,11 +73,11 @@ public class VentanaPrincipal extends JFrame {
         JButton btnLimpiar = new JButton("Limpiar");
 
         btnInsertar.setBackground(new Color(70, 130, 180));
-        btnInsertar.setForeground(Color.WHITE);
+        btnInsertar.setForeground(Color.BLACK);
         btnBuscar.setBackground(new Color(46, 139, 87));
-        btnBuscar.setForeground(Color.WHITE);
+        btnBuscar.setForeground(Color.BLACK);
         btnLimpiar.setBackground(new Color(105, 105, 105));
-        btnLimpiar.setForeground(Color.WHITE);
+        btnLimpiar.setForeground(Color.BLACK);
 
         panelBotones.add(btnInsertar);
         panelBotones.add(btnBuscar);
